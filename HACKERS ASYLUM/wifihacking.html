@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wifi Hacking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="youarebeingwatched\style.css">
+</head>
+<body>
+
+    <div class="sidenav">
+        <b>
+        <img src="youarebeingwatched\icon.jpg" height="100px" width="100px" hspace="20px">
+        <br><br>
+      <a href="index.html">Ransomware</a>
+      <a href="mousejacking.html">Mousejacking</a>
+      <a href="wifihacking.html" style="background-color: black;">Wifi Hacking</a>
+      <a href="threatmodelling.html">Threat<br>Modelling</a>
+      <a href="communication.html">Communicationg<br>Ideas</a>
+      <a href="threatintelligence.html">Weekly Intelligence</a>
+      <a href="steganography.html">Steganography</a>
+      <a href="autoloan.html">Wordpress<br>AutoLoan</a>
+      <a href="cipher1.html">Caeser Cipher</a>
+      <a href="cipher2.html">Vigenère Cipher</a>
+      <a href="draft01.html">Draft 01</a>
+    </b>
+    </div>
+    
+
+
+<div class="main" id="data1">
+        <div class="header">
+         <h1><I>YOU ARE BEING WATCHED</h1></I>
+       </div>
+
+<div class="row" style="font-size: 20px;">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>HOW I HACKED INTO MY NEIGHBOUR&#39S WIFI AND HARVESTED LOGIN CREDENTIALS?</h2>
+      <h5> Aditya Anand 
+          October 15, 2018 · 5 min read</h5>
+      <div class="wifihacking1"></div>
+      <p>
+
+          It has been almost a week since I wrote my last article, which gained a lot of attraction.
+          <BR>
+            <br>
+
+        <h4>      How I pranked my friend using DNS Spoofing?</h4>
+          Since, then I have been playing around with network sniffing tools and trust me there is a different kind of high you get when you sniff the traffic of networks. 
+          The thing is it&#39s not much fun when you are sniffing your own network, you know what&#39s the traffic is going to be and all. 
+          The fun begins when you are on someone&#39s else network, that &#39 s when the thrill starts. 
+          <br><br>You go through each and every Wireshark packet carefully, hoping to find login credentials or something valuable of sorts. 
+          That’s when I decided let &#39 s hack into the nearby WiFi network and sniff out the packets.
+          Let’s begin!
+          <br><br>
+          So, to begin with the hack first I had to search for different WiFi signals in the nearby area, there were a few of them.<br><br>
+
+          <b>WiFi Networks</b>
+          <p style="margin-left: 40px">
+          Once, I checked for the WiFi networks then I turned on my Kali machine to hack into one of these networks. I opened up my terminal and typed in
+          <br>
+          <p style="margin-left: 70px; background-color: black; color: lightgreen;">wifite</p>
+          <p style="margin-left: 40px"> <b>Wifite</b>, is one of the most user friendly tool out there you can use for hacking WiFi ( that’s just my opinion ). The information shown below popped up.
+          </p>
+          <b>WiFi Networks</b>
+          <br>
+          <p style="margin-left: 40px">
+          Now if you are a hacker, then you already know which network I would have tried to hack in. 
+          Yes, <q><b>IP on Firewall</b></q>. I mean if you name your WiFi, Firewall then it is like asking nearby hackers to mess with you, and so I choose it.
+          <br><br>
+          <b>WiFite Packet Capture</b>
+          <br><br>
+          As soon, as the target was selected <q><b>wifite</b></q> ran the packet capture for <q><b>IP on Firewall</b></q>, it found the hosts connected to it and sent out de-auth packets for a few moments till the time the device was disconnected. 
+          Once the device got disconnected, the device tried to connect back to the WiFi router and during this process, <q><b> wifite</b></q> captured the packet with the password for the WiFi in encrypted form.
+          <br><br>
+          Now, that once the capture file was present with me. I ran it against the rockyou.txt wordlist file using aircrack-ng, the command was as follows.
+          <br>
+          <p style="margin-left: 70px; background-color: black; color: lightgreen;">
+              aircrack-ng -w rockyou.txt -b &ltbssid&gt &ltcapture file name&gt
+              </p>
+              <p style="margin-left: 40px">    
+          I let it run for a few minutes at max, when I got a hit on the password.
+          <p style="margin-left: 70px; background-color: black; color: lightgreen;">
+          Aircrack-ng Password Crack
+          </p>
+          <p style="margin-left: 40px">
+          Once, I obtained the password, the next thing was to go ahead and sniff-out their traffic and look for interesting things.
+          </p>
+         <b> Sniffing the packets</b>
+         <p style="margin-left: 40px">
+          I was feeling ecstatic as soon as I figured out the password of IP on Firewall. The reason was, if they had not used such a simple password which was present in the rockyou.txt file, then the whole process would have been bogged down, I guess it was my lucky day.
+          <br><br>
+          Once I got into the network then I started ettercap, ( one of the best tool out there to sniff packets ). I wanted to capture each and every packet on their network, so I opened up terminal and typed in the following command.          <p style="margin-left: 70px; background-color: black; color: lightgreen;">
+              ettercap -T -M arp -i eth0 /// -w test.cap
+              </p>       
+              <p style="margin-left: 40px">   
+              ( To refer the ettercap tutorial visit here : <a href="https://www.poftut.com/ettercap-tutorial-network-sniffing-man-middle/">Ettercap Packet Sniffing</a>)
+          <br><br>
+          As soon as I initiated the ettercap, tons and tons of traffic was passing through on my terminal screen. I saved it all to the test.cap so that I can later on go through each and every packet on my device using Wireshark for detailed inspection.
+          <br><br>
+          If you want to go through the traffic on your Kali machine then you can use the following commands
+          <p style="margin-left: 70px; background-color: black; color: lightgreen;">
+              cat test.cap | grep -a &ltkeyword&rt
+              </p>
+          Using the above command you can search for the keyword you want to search for, the below command gave me the following output
+          <p style="margin-left: 70px; background-color: black; color: lightgreen;">
+              cat test.cap | grep -a password
+              <br>
+          //Capture from test.cap document
+            </p>
+            <p style="margin-left: 40px">
+          Once, I transferred the file to my laptop for further inspection I picked up many other login credentials which were entered on HTTP websites. 
+          The websites the users were visiting and many other interesting information.
+          <br><br>
+          test.cap on wireshark
+          <br><br>
+          So, now you know why there is such a high about intercepting other people’s traffic.
+          <br><br>
+          </p>
+          <b>Moral</b>
+          <p style="margin-left: 40px">
+
+          The biggest take away from this hack is to never use HTTP websites and above all never use your credentials to login on those websites. 
+          You may never know who else might be sniffing the network and they will pick up your login credentials all just by viewing the network traffic. 
+          <br><br>If feasible then use your VPN services to encrypt your traffic, they provide you with security no matter where you are. 
+          So the next time you encounter websites that are not https, just run away or be really careful to not leak anything personal information.
+          <br><br>
+          If you enjoyed it please do clap & let’s collaborate.<b> Get, Set, Hack!</b>
+          <br><br>
+      </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+      <div class="card">
+        <h2><center>About me</center></h2>
+        <div class="profilepic1"></div>
+        <p>Username: CyberGod0001
+          <br>Annonymous player - Cyber Security God<br>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Comments</h3>
+        <p>
+          <b>trumpppp007</b>, 18:05:10 30/10/18: This is illegal please report this user...dont do this..this is not cyber security<br><br>
+          <b>modiji001</b>, 23:21:50 22/10/18: Woahhh now thats some useful information gonna try this for sure.<br><br>
+          <b>CyberGod0001</b>, 00:02:00 03/09/2019: Well, not everything goes as planned, huh <a href="https://www.dropbox.com/s/aw2cluep28xq4yf/company_word_list.txt?dl=0">link</a><br>
+          
+        </p>
+      </div>
+      <div class="footer" style="font-size: 20px">
+        <b>Contact Us at: CyberGod0001@annonymous.com  
+        <img src="youarebeingwatched\fb.png" width="20px" height="20px">
+        <img src="youarebeingwatched\insta.png" width="20px" height="20px">
+      </div>
+    </div>
+  </div>
+<br>
+
+</body>
+</html> 

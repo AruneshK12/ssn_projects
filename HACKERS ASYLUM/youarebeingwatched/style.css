@@ -1,0 +1,328 @@
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:white;
+  overflow-x: hidden;
+  padding-top: 20px;
+  opacity: 0.9;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color:blue;
+  display: block;
+  opacity: 1.0;
+  
+}
+
+.sidenav a:hover {
+  color:black;
+}
+
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  opacity:1.0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 30px;
+  background-image: url("wallpaper.jpg");
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  background: white;
+  opacity: 1.0;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  opacity: 1.0;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  opacity: 1.0;
+}
+
+/*All images in all pages */
+.ransom1 {
+  background-image: url("ransomware.jpg");
+  width:50%;
+  height: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mousejacking1 {
+  background-image: url("mousejacking.jpg");
+  width:60%;
+  height: 210px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.threatmodelling1{
+  background-image: url("threatmodelling.jpg");
+  width:40%;
+  height: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.threatintelligence1{
+  background-image: url("threatintelligence.jpg");
+  width:70%;
+  height: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.communicate1{
+  background-image: url("communicate.jpg");
+  width:25%;
+  height: 160px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wordpress1{
+  background-image: url("wordpress.jpg");
+  width:50%;
+  height: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wordpress2{
+  background-image: url("formidableforms.jpg");
+  width:46%;
+  height: 300px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wordpress3{
+  background-image: url("formidableforms2.jpg");
+  width:45%;
+  height: 100px;
+  padding: 20px;
+
+}
+.wordpress4{
+  background-image: url("formidableforms3.jpg");
+  width:46%;
+  height: 270px;
+  padding: 20px;
+
+}
+.wordpress5{
+  background-image: url("formidableforms4.jpg");
+  width:46%;
+  height: 260px;
+  padding: 20px;
+
+}
+.wordpress6{
+  background-image: url("formidableforms5.jpg");
+  width:46%;
+  height: 350px;
+  padding: 20px;
+
+}
+.wordpress7{
+  background-image: url("formidableforms6.jpg");
+  width:46%;
+  height: 360px;
+  padding: 20px;
+
+}
+.wordpress8{
+  background-image: url("formidableforms7.jpg");
+  width:46%;
+  height: 290px;
+  padding: 20px;
+
+}
+.wordpress9{
+  background-image: url("formidableforms8.jpg");
+  width:46%;
+  height: 370px;
+  padding: 20px;
+
+}
+.wordpress10{
+  background-image: url("formidableforms9.jpg");
+  width:46%;
+  height: 400px;
+  padding: 20px;
+
+}
+.wordpress11{
+  background-image: url("formidableforms10.jpg");
+  width:46%;
+  height: 400px;
+  padding: 20px;
+
+}
+.wordpress12{
+  background-image: url("formidableforms11.jpg");
+  width:46%;
+  height: 400px;
+  padding: 20px;
+
+}
+.wordpress13{
+  background-image: url("formidableforms12.jpg");
+  width:46%;
+  height: 400px;
+  padding: 20px;
+}
+.wordpress14{
+  background-image: url("formidableforms13.jpg");
+  width:46%;
+  height: 150px;
+  padding: 20px;
+
+}
+.wordpress15{
+  background-image: url("formidableforms14.jpg");
+  width:46%;
+  height: 150px;
+  padding: 20px;
+}
+.wordpress16{
+  background-image: url("formidableforms15.jpg");
+  width:46%;
+  height: 370px;
+  padding: 20px;
+}
+.wordpress17{
+  background-image: url("formidableforms16.gif");
+  width:50%;
+  height: 600px;
+  padding: 20px;
+}
+.wordpress18{
+  background-image: url("formidableforms17.jpg");
+  width:50%;
+  height: 540px;
+  padding: 20px;
+}
+
+.wifihacking1{
+  background-image: url("wifihacking.jpg");
+  width:43%;
+  height: 150px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steganography
+{
+  background-image: url("steganography.jpg");
+  width:50%;
+  height: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.steganography2
+{
+  background-image: url("steganography2.jpg");
+  width:57%;
+  height: 420px;
+  padding: 20px;
+  opacity:1.0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caesarcipher1{
+  background-image: url("caesarcipher1.jpg");
+  width:57%;
+  height: 150px;
+  padding: 20px;
+  opacity:1.0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.profilepic1{
+  background-image: url("userface.jpg");
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+}
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   opacity: 0.9;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 15px;
+  opacity: 0.7;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other 
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mousejacking Attacks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="youarebeingwatched\style.css">
+</head>
+<body>
+
+  <div class="sidenav">
+    <b>
+    <img src="youarebeingwatched\icon.jpg" height="100px" width="100px" hspace="20px">
+    <br><br>
+  <a href="index.html">Ransomware</a>
+  <a href="mousejacking.html" style="background-color: black;">Mousejacking</a>
+  <a href="wifihacking.html">Wifi Hacking</a>
+  <a href="threatmodelling.html">Threat<br>Modelling</a>
+  <a href="communication.html">Communicationg<br>Ideas</a>
+  <a href="threatintelligence.html">Weekly Intelligence</a>
+  <a href="steganography.html">Steganography</a>
+  <a href="autoloan.html">Wordpress<br>AutoLoan</a>
+  <a href="cipher1.html">Caeser Cipher</a>
+  <a href="cipher2.html">Vigenère Cipher</a>
+  <a href="draft01.html">Draft 01</a>
+</b>
+</div>
+
+
+<div class="main" id="data1">
+        <div class="header">
+         <h1><I>YOU ARE BEING WATCHED</I></h1>
+       </div>
+
+<div class="row" style="font-size: 20px;">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>What Are Mousejacking Attacks, and How to Defend Against Them</h2>
+      <h5>Published: August 15, 2018</h5>
+      <div class="mousejacking1">
+
+      </div>     <p>
+
+If you are using a wireless keyboard or mouse on your computer, beware of the risk of getting mousejacked. Using this technique, attackers could take over your entire Active Directory in just minutes using a $15 USB radio device that discovers vulnerable devices.
+<br>      </p>
+In this podcast, Brian Johnson, president of 7 Minute Security and an information security consultant, explains how mousejacking works and how to safeguard your network against it. Here’s what is discussed:
+Handpicked related content:
+<p>
+    Active Directory Security 101, Episode 1: Listen and Learn
+  <br></p>
+<h4>HOW MOUSEJACKING WORKS</h4>
+<p style="margin-left:40px">
+Brian ran a pentest to prove that this simple attack can have devastating consequences. All it took to get into the network was a cheap device and an easily crafted payload.
+<br><br>
+When you type on your wireless keyboard or move your wireless mouse, information describing the actions is sent wirelessly to the USB dongle plugged into your computer. In a mousejacking attack, the attacker’s device scans for the wireless packets being sent; when it finds one, it can impersonate the mouse or keyboard and send its own signals to the dongle. You might notice that something strange is happening, like there are additional keystrokes being typed or your mouse is moving unexpectedly, but it might be already too late; even a few keystrokes or mouse clicks might be enough to execute an attack, such as installing malware or copying files off your computer.
+<br><br>
+The attacker doesn’t even need to be physically close to take control over a computer — the attack can be executed from up to 100 meters away. However, only running workstations can be compromised.
+</p>
+<h4>ACTIVE DIRECTORY AT RISK</h4>
+<p style="margin-left:40px">
+So, what damage could a mousejacking attack do? On the one hand, the attacker can eavesdrop on your keystrokes as they are transmitted to a USB dongle, much like a keylogger program. As a result, the attacker might be able to glean sensitive data such as your usernames, passwords and security question answers, as well as personal information like your credit card numbers. On the other hand, the attacker can send keystrokes to your computer as if you had entered them. Using keystroke injection, attackers can install rootkits or install malware that enables them to get a foothold in your network.
+<br><br>
+The worse-case scenario is a mousejacking attack on an administrative account — it could compromise your network through Active Directory. If you are logged in under a Domain Admin account, for instance, a mousejacker could use keystroke injection to create new users and add them to the Domain Admins group in your company’s Active Directory, thereby gaining virtually unlimited control and access to your network.
+<br><br>
+In fact, the risks are so great that when Brian showed the results of pentests to his customers, they decided to change their policy regarding use of wireless devices.<br></p>
+</p>
+<h4>METHODS OF DEFENCE</h4>
+<p style="margin-left: 40px">
+Many popular keyboards and mice are at risk, so the first thing you need to do is to check whether you have any vulnerable devices. Here you can check the list of devices known to be susceptible to mousejacking attacks. This vulnerability can be fixed only on the manufacturer’s side, so all you can do is to replace each vulnerable device with a secure one.
+<br><br>
+In the meantime, be sure to follow the best practice of locking your computer when you leave it, even for a couple of minutes. Remember how fast a mousejacking attack can be executed? If you leave your computer unlocked while you step away to get coffee, a hacker gets several minutes to exploit the vulnerability and compromise your network without being noticed.
+<br>
+<br>
+The next thing you should do is ask whether you would even know if you have been attacked. How long would it take for you to spot the attack? Could you respond quickly enough to minimize the damage?
+<br></p>
+<h4>HANDPICKED RELATED CONTENT:</h4>
+<p style="margin-left: 40px;"><b>
+    [Free Guide]<a href="https://www.netwrix.com/audit_policy_best_practice.html">Audit Policy Best Practices</b></p></a>
+<p>
+One essential strategy for defending against mousejacking — and other attacks as well — is to track changes to your Active Directory, especially the addition of members to highly privileged groups like Domain Admins. Getting alerts about critical modifications enables you to quickly revert improper changes, thereby blocking attacks in their early stages and limiting their impact.
+      </p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+      <div class="card">
+        <h2><center>About me</center></h2>
+        <div class="profilepic1"></div>
+        <p>Username: CyberGod0001
+          <br>Annonymous player - Cyber Security God<br>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Comments</h3>
+        <p>
+          <b>zeus_god</b>, 7:10:25 20/08/18: Woah didn't know wireless things are that hackable.<br><br>
+          <b>mufasa</b>, 15:20:30 25/08/18: Thank god I always use wired ones wireless have to be charged continously.<br>
+        </p>
+      </div>
+      <div class="footer" style="font-size: 20px">
+        <b>Contact Us at: CyberGod0001@annonymous.com  
+        <img src="youarebeingwatched\fb.png" width="20px" height="20px">
+        <img src="youarebeingwatched\insta.png" width="20px" height="20px">
+      </div>
+    </div>
+  </div>
+<br>
+
+</body>
+</html> 

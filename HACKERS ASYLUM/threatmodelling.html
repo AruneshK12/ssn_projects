@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Threat Modelling</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="youarebeingwatched\style.css">
+</head>
+<body>
+
+  <div class="sidenav">
+    <b>
+    <img src="youarebeingwatched\icon.jpg" height="100px" width="100px" hspace="20px">
+    <br><br>
+  <a href="index.html">Ransomware</a>
+  <a href="mousejacking.html">Mousejacking</a>
+  <a href="wifihacking.html">Wifi Hacking</a>
+  <a href="threatmodelling.html" style="background-color: black;">Threat<br>Modelling</a>
+  <a href="communication.html">Communicationg<br>Ideas</a>
+  <a href="threatintelligence.html">Weekly Intelligence</a>
+  <a href="steganography.html">Steganography</a>
+  <a href="autoloan.html">Wordpress<br>AutoLoan</a>
+  <a href="cipher1.html">Caeser Cipher</a>
+  <a href="cipher2.html">Vigenère Cipher</a>
+  <a href="draft01.html">Draft 01</a>
+</b>
+</div>
+
+
+<div class="main" id="data1">
+        <div class="header">
+         <h1><i>YOU ARE BEING WATCHED</i></h1>
+       </div>
+
+<div class="row" style="font-size: 20px;">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Threat Modeling: ATT&CK-ing Risk Management</h2>
+      <h5>Posted November 20, 2018</h5>
+      <div class="threatmodelling1"></div>
+      <p>
+        <br><br>
+        In May, LookingGlass wrote about the benefits of threat modeling – specifically emphasizing its proactive nature. 
+        Having had many conversations on this topic since with various customers, partners, and colleagues, I think it’s important to clarify that our view of “<b>threat modeling</b>” focuses on threat actor modeling and not application threat modeling. 
+        As a product manager, when I hear this term my mind often goes to the latter, which is an incredibly useful, but decidedly different exercise. 
+        <br>Now that we got that out of the way...
+      </P>
+      <h4>
+        Threat Modeling Framework
+      </h4>
+      <p style="margin-left: 40px">
+        If the first step is deciding you want to add threat actor modeling to your cyber defense strategy (PSA: there is no silver bullet), then the second step is selecting a threat modeling framework. 
+        This will ensure that as your cyber intel team builds its knowledge base on the threat actors you begin to track and model, they’re using a common methodology. 
+        <br><br>One of the most popular frameworks right now is<b> MITRE ATT&CK</b>, and in my opinion this popularity is well-deserved so witnessing its adoption within our own customers’ processes is encouraging. 
+        There are also some great people behind the effort, so if you are wondering how you can get started with ATT&CK, MITRE’s own Katie Nickels has you covered. 
+        <br><br>To be clear, even Katie will tell you that there are other frameworks out there and each has their own strength, but in combined interest of keeping your attention and getting to my point, we’ll move on.
+      </p>
+        <h4>Prioritizing Threat Actors to Model</h4>
+        <p style="margin-left: 40px;">
+        Let’s pretend for a moment that you’re already convinced: threat actor modeling is something you want to add to your arsenal, and maybe you’ve even decided that ATT&CK is the right framework for you. 
+        You start to follow Katie’s Level 1, 2, and 3 advice but begin to feel overwhelmed. 
+        <br><br>How do you decide which actors you should model? 
+        <br>Beyond focusing on the actors that have been known to target your industry, what other information should you analyze? 
+        <br>These kinds of questions are near and dear to my product manager heart because we’re essentially asking: 
+        <Br>“how can we best prioritize this?” (my entire job can basically be boiled down to prioritizing work). 
+        There are many approaches to this, but there are two concepts that I have seen customers find incredibly powerful:
+      </p>
+<p style="margin-left: 70px;">
+            <b>PIRs</b>: I had to learn a lot about Intelligence (with a capital ‘I’) when I began working in this space. 
+            It turns out the Intelligence Community (IC) has thought extremely deeply – for a long time – about this misleadingly simple-sounding problem of “what do we care about?” The practice of identifying priority intelligence requirements (PIRs) goes a long way to formalize the answer to this question. Although that is absolutely not this blog post, I would be happy to offer some recommendations on the sources that helped me better appreciate this concept.
+</p>
+<p style="margin-left: 70px"><b>Target-Centric</b>: A simple, but powerful consideration, “what information would threat actors want?” Building this into your threat models as soon as possible will help both the prioritization and relevance of said models.
+ <br> I won’t make you reach out to me for additional recommendations here because LookingGlass was fortunate enough to collaborate with Jake Williams on a SANS white paper earlier this year which goes deeper into the benefits of this approach.
+          </p>
+          <p>
+        This seems like… a lot
+      </p>
+      <p>
+      <b>Your Inner Monologue</b>: Dan, you’ve worn me down. We get it, this is a powerful tool which helps proactively defend the organization. But I’ve got to be honest, it sounds like a lot of work and my team does not have the time for this.
+      </p>
+      <p style="margin-left: 40px">
+        <b>Me [desperately trying not to sound defensive]</b>: I wholeheartedly agree with Katie’s post here – getting started is not as bad as it may seem! Whether or not you have a formal document, you likely already have some form of intel requirements.
+         <br>A quick discussion with your cyber colleagues would produce a rough list of high-value targets. Using this info to do research into the<b> MITRE ATT&CK</b> Groups could likely identify a threat actor your organization should be modeling.
+         </p>
+       <b> Threat Modeling Output Drives Risk Management</b>
+      <p style="margin-left: 40px">
+        The point of all of this is not necessarily for you to conclude that I’m right, and ultimately decide it would be super helpful if there was a software out there which enabled this. In all seriousness, the actual goal is to get to a point where your intel team is speaking the language of the business: risk management. If you’ve established a process which takes into account your highest value assets, identifies which (if any) of your organization-specific controls protect them, and quantifies that risk in the context of real-world attacks –the value of intelligence will be obvious and appreciated all the way up to the boardroom.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+      <div class="card">
+        <h2><center>About me</center></h2>
+        <div class="profilepic1"></div>
+        <p>Username: CyberGod0001
+          <br>Annonymous player - Cyber Security God<br>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Comments</h3>
+        <p>
+          <b>i_am_back</b>, 05:10:40 1/12/18: Who evens reads this stuff nowadays only one image <br><br>
+          <b>hackerz12</b>, 22:20:30 2/12/18: Oh damnnn still killing it man/woman<br>
+        </p>
+      </div>
+      <div class="footer" style="font-size: 20px">
+        <b>Contact Us at: CyberGod0001@annonymous.com  
+        <img src="youarebeingwatched\fb.png" width="20px" height="20px">
+        <img src="youarebeingwatched\insta.png" width="20px" height="20px">
+      </div>
+    </div>
+  </div>
+<br>
+
+</body>
+</html> 

@@ -1,0 +1,163 @@
+`<!DOCTYPE html>
+<html>
+<head>
+  <title>Caesar Cipher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="youarebeingwatched\style.css">
+</head>
+<body>
+
+    <div class="sidenav">
+        <b>
+        <img src="youarebeingwatched\icon.jpg" height="100px" width="100px" hspace="20px">
+        <br><br>
+      <a href="index.html">Ransomware</a>
+      <a href="mousejacking.html">Mousejacking</a>
+      <a href="wifihacking.html">Wifi Hacking</a>
+      <a href="threatmodelling.html">Threat<br>Modelling</a>
+      <a href="communication.html">Communicationg<br>Ideas</a>
+      <a href="threatintelligence.html">Weekly Intelligence</a>
+      <a href="steganography.html">Steganography</a>
+      <a href="autoloan.html">Wordpress<br>AutoLoan</a>
+      <a href="cipher1.html" style="background-color: black;">Caeser Cipher</a>
+      <a href="cipher2.html">Vigenère Cipher</a>
+      <a href="draft01.html">Draft 01</a>
+    </b>
+    </div>
+
+
+<div class="main" id="data1">
+        <div class="header">
+         <h1><i>YOU ARE BEING WATCHED</i>
+       </div>
+
+<div class="row" style="font-size: 20px;">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Caesar Cipher</h2>
+      <h5>Title description, July 26, 2019</h5>
+      <div class="caesarcipher1"></div>
+      <p>
+<h4>        
+Introduction
+</h4>
+The Caesar cipher is one of the earliest known and simplest ciphers. 
+It is a type of substitution cipher in which each letter in the plaintext is '<b>shifted</b>' a certain number of places down the alphabet. 
+For example, with a shift of 1, A would be replaced by B, B would become C, and so on. 
+The method is named after Julius Caesar, who apparently used it to communicate with his generals.
+<br><br>
+More complex encryption schemes such as the Vigenère cipher employ the Caesar cipher as one element of the encryption process. 
+The widely known ROT13 '<b>encryption</b>' is simply a Caesar cipher with an offset of 13. The Caesar cipher offers essentially no communication security, and it will be shown that it can be easily broken even by hand.
+<br><br><b>Example</b>
+<p style="margin-left:40px">
+To pass an encrypted message from one person to another, it is first necessary that both parties have the '<b>key</b>' for the cipher, so that the sender may encrypt it and the receiver may decrypt it. 
+For the caesar cipher, the key is the number of characters to shift the cipher alphabet.
+<br><br>
+Here is a quick example of the encryption and decryption steps involved with the caesar cipher. 
+The text we will encrypt is '<b>defend the east wall of the castle</b>', with a shift (key) of 1.
+<p style="margin-left: 70px; background-color: black; color: lightgreen;">
+plaintext:  defend the east wall of the castle
+<br>
+ciphertext: efgfoe uif fbtu xbmm pg uif dbtumf
+</p>
+<p style="margin-left: 40px">
+It is easy to see how each character in the plaintext is shifted up the alphabet. Decryption is just as easy, by using an offset of -1.
+<p style="margin-left: 70px; background-color: black; color: lightgreen;">
+plain:  abcdefghijklmnopqrstuvwxyz
+<br>
+cipher: bcdefghijklmnopqrstuvwxyza
+</p>
+<p style="margin-left:40px">
+Obviously, if a different key is used, the cipher alphabet will be shifted a different amount.
+</p>
+<h4>
+Mathematical Description</h4>
+First we translate all of our characters to numbers, 'a'=0, 'b'=1, 'c'=2, ... , 'z'=25. We can now represent the caesar cipher encryption function, e(x), where x is the character we are encrypting, as:
+
+<p style="margin-left:70px">e(x) = (x + k)(mod 26)</p>
+<p style="margin-left:20px">
+Where k is the key (the shift) applied to each letter. After applying this function the result is a number which must then be translated back into a letter. The decryption function is :
+<br>
+<p style="margin-left:70px">e(x) = (x - K)(mod 26)</p>
+<h4>
+JavaScript Example of the Caesar Cipher
+</h4>
+<p style="margin-left: 70px; background-color: black; color: lightgreen;">
+Plaintext
+<br>
+attack at dawn
+<br>
+shift:
+<br>
+Ciphertext
+</p>
+<h4>
+Other Implementations
+</h4>
+<p style="margin-left: 40px">
+For Caesar cipher code in various programming languages, see the Implementations page.
+<br><br>
+To encipher your own messages in python, you can use the pycipher module. To install it, use pip install pycipher. To encipher messages with the Caesar cipher (or another cipher, see here for documentation):
+<p style="margin-left: 70px; background-color: black; color: lightgreen;">
+>>>from pycipher import Caesar
+<br>
+>>>Caesar(key=1).encipher('defend the east wall of the castle')
+<br>
+'EFGFOEUIFFBTUXBMMPGUIFDBTUMF'
+<br>
+>>>Caesar(key=1).decipher('EFGFOEUIFFBTUXBMMPGUIFDBTUMF')
+<br>
+'DEFENDTHEEASTWALLOFTHECASTLE'
+</p>
+<h4>
+Cryptanalysis
+</h4>
+<p style="margin-left:40px">
+See Cryptanalysis of the Caesar Cipher for a way of automatically breaking this cipher.
+<br><br>
+Cryptanalysis is the art of breaking codes and ciphers. The Caesar cipher is probably the easiest of all ciphers to break. Since the shift has to be a number between 1 and 25, (0 or 26 would result in an unchanged plaintext) we can simply try each possibility and see which one results in a piece of readable text. If you happen to know what a piece of the ciphertext is, or you can guess a piece, then this will allow you to immediately find the key.
+<br><br>
+If this is not possible, a more systematic approach is to calculate the frequency distribution of the letters in the cipher text. This consists of counting how many times each letter appears. Natural English text has a very distinct distribution that can be used help crack codes. This distribution is as follows:
+<h4 style="margin-left:40px">Frequency distribution</h4>
+<p style="margin-left: 40px">
+English Letter Frequencies
+<br><br>
+This means that the letter e is the most common, and appears almost 13% of the time, whereas z appears far less than 1 percent of time. Application of the Caesar cipher does not change these letter frequencies, it merely shifts them along a bit (for a shift of 1, the most frequent ciphertext letter becomes f). A cryptanalyst just has to find the shift that causes the ciphertext frequencies to match up closely with the natural English frequencies, then decrypt the text using that shift. This method can be used to easily break Caesar ciphers by hand.
+<br><br>
+If you are still having trouble, try the cryptanalysis section of the substitution cipher page. All strategies that work with the substitution cipher will also work with the Caesar cipher (but methods that work on the Caesar cipher do not necessarily work on the general substitution cipher).
+<p>
+For a method that works well on computers, we need a way of figuring out which of the 25 possible decryptions looks the most like English text. 
+See Cryptanalysis of the Caesar Cipher for a walkthrough of how to break it using quadgram statistics. 
+The key (or shift) that results in a decryption with the highest likelyhood of being English text is most probably the correct key. 
+<br><br>Of course, the more ciphertext you have, the more likely this is to be true (this is the case for all statistical measures, including the frequency approach above). 
+So the method used is to take the ciphertext, try decrypting it with each key, then see which decryption looks the best. 
+This simplistic method of cryptanalysis only works on very simple ciphers such as the Caesar cipher and the rail fence cipher, even slightly more complex ciphers can have far too many keys to check all of them.
+<br><br></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+      <div class="card">
+        <h2><center>About me</center></h2>
+        <div class="profilepic1"></div>
+        <p>Username: CyberGod0001
+          <br>Annonymous player - Cyber Security God<br>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Comments</h3>
+        <p>
+          <b>dedsec##</b>, 01:45:10 1/08/19: Amazing take on Caesar Cipher thanks for the help.<br><br>
+          <b>gokugo1211</b>, 13:25:30 3/08/19: Nowadays copying stuff from different blogs to make another blog is an art LMAO<br>
+        </p>
+      </div>
+      <div class="footer" style="font-size: 20px">
+        <b>Contact Us at: CyberGod0001@annonymous.com  
+        <img src="youarebeingwatched\fb.png" width="20px" height="20px">
+        <img src="youarebeingwatched\insta.png" width="20px" height="20px">
+      </div>
+    </div>
+  </div>
+<br>
+
+</body>
+</html> 
